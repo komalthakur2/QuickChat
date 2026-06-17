@@ -19,10 +19,10 @@ const App = () => {
     <div className="bg-black bg-[url('/bgImage.svg')] bg-ontain">
       <Toaster/>
       <Routes>
-        <Route path='/' element={authUser ? <HomePage /> : <Navigate to="/login" /> } />
+        <Route path='/' element={authUser ? <HomePage /> : <Navigate to="/signup" /> } />
         <Route path='/login' element={!authUser ? <LoginPage defaultState="Login" /> : <Navigate to="/" />} />
         <Route path='/signup' element={!authUser ? <LoginPage defaultState="Sign up" /> : <Navigate to="/" />} />
-        <Route path='/profile' element={authUser ? <ProfilePage /> : <Navigate to="/login" />} />
+        <Route path='/profile' element={authUser ? <ProfilePage /> : <Navigate to="/signup" />} />
       </Routes>
     </div>
   )
