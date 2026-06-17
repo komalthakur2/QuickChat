@@ -2,8 +2,8 @@ import { useState } from 'react'
 import assets from '../assets/assets'
 import { useAuth } from '../../context/AuthContext'
 
-const LoginPage = () => {
-  const [currState, setCurrState] = useState("Login")
+const LoginPage = ({ defaultState = "Login" }) => {
+  const [currState, setCurrState] = useState(defaultState)
   const [fullName, setFullName] = useState("")
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
@@ -133,24 +133,24 @@ const LoginPage = () => {
 
       <div className='w-[90%] mx-4 pb-2'>
   {currState === "Sign up" ? (
-    <p className='text-sm text-gray-600'>
+    <p className='text-sm text-gray-300'>
       Already have an account?{" "}
       <span
         onClick={() => {
           setCurrState("Login");
           setIsDataSubmitted(false);
         }}
-        className='font-medium text-violet-500 cursor-pointer'
+        className='font-medium text-violet-400 hover:text-violet-300 cursor-pointer transition-colors'
       >
         Login here
       </span>
     </p>
   ) : (
-    <p className='text-sm text-gray-600'>
+    <p className='text-sm text-gray-300'>
       Create an account{" "}
       <span
         onClick={() => setCurrState("Sign up")}
-        className='font-medium text-violet-500 cursor-pointer'
+        className='font-medium text-violet-400 hover:text-violet-300 cursor-pointer transition-colors'
       >
         Click here
       </span>
