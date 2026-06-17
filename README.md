@@ -183,8 +183,6 @@ GitHub: https://github.com/komalthakur2
 
 ---
 
-## 📌 Project Purpose
 
-QuickChat was developed to explore modern full-stack web development concepts including real-time communication, authentication, media management, responsive UI design, and scalable MERN architecture.
 
 
